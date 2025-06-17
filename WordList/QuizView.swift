@@ -24,7 +24,7 @@ struct QuizView: View {
             Spacer()
             if words.isEmpty{
                 Text("登録されている単語がありません")
-            } else if words.indices.contains(index){
+            } else {
                 Text(words[index].english)
                     .font(.largeTitle)
                 Text(showAnswer ? words[index].japanese : "-")
@@ -41,8 +41,6 @@ struct QuizView: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.orange)
                 .clipShape(.capsule)
-            } else {
-                Text("おしまい")
             }
             Spacer()
             
